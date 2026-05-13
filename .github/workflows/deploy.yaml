@@ -1,5 +1,4 @@
 name: Build & Deploy to Azure App Service
-...
 
 on:
   push:
@@ -40,7 +39,7 @@ jobs:
           cp package*.json deployment-package/
           cp next.config.js deployment-package/ 2>/dev/null || true
 
-      - name: Install deployement package
+      - name: Install deployment package
         working-directory: deployment-package
         run: npm ci --omit=dev
 
